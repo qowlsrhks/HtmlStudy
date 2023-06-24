@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자 활용</title>
+  <style>
+    div>h1{ /*자손css문법*/
+    background-color:aquamarine;
+    }
+    div span{/*후손css문법*/
+    background-color:burlywood;
+    }
+    div>h2{
+    border:3px solid #000;
+    }
+    div>span{
+    color:crimson;
+    }
+    .box span{
+    font-size:40px;
+    }
+
+    h1+h2{
+    color:crimson;
+    }
+    h1~h2{
+    background-color:beige;
+    }
+
+    h1:hover{
+    /*특정한 요소에 마우스를 올렸을 때!*/
+    background-color:beige;
+    }
+    h2:active{
+    /*특정한 요소에 마우스로 클릭을 한 순간!*/
+    color:aqua;
+    }
+
+  </style>
+</head>
+<body>
+<!--후손선택자 & 자손선택자
+    후손선택자: 해당요소의 하위요소에 있는 특정한 요소를 모두 선택 / 선택자A 선택자B
+    자손선택자: 해당요소의 바로 밑에 위치하는 특정한 요소를 선택 / 선택자A > 선택자B
+<div>
+  <h1>제목1</h1>
+  <h2>제목2</h2>
+  <div class="box">
+    <ul>
+      <li>menu1</li>
+      <li>menu2</li>
+      <li><span>menu3</span></li>
+    </ul>
+  </div>
+  <h2>제목2</h2>
+  <span>span</span>
+</div>
+-->
+
+<!--동위 선택자
+:동위관계에 있는 요소중에 해당요소보다 뒤에 존재하는 특정한 요소를
+선택할 때 사용
+-선택자A+선택자B : 선택자A 바로 뒤에 있는 선택자B를 선택
+-선택자A~선택자B : 선택자A 뒤에 있는 선택자B를 모두 선택
+-->
+
+<!--반응선택자:사용자가 마우스를 이용해서 혹은 특정한
+행동(반응)을 취했을 때 css속성을 지정할 수 있는 선택자-->
+<h1>제목1</h1>
+<h2>제목2</h2>
+<h2>제목2</h2>
+<h2>제목2</h2>
+<h2>제목2</h2>
+<h2>제목2</h2>
+
+</body>
+</html>
