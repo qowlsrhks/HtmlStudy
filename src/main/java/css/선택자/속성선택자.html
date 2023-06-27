@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자의활용</title>
+  <style>
+    input[type="text"]{
+    background-color:coral;
+    }
+    img[src$="jpg"]{
+    border:3px solid #f00;
+    }
+    img[src$="png"]{
+    border:3px solid #ff0;
+    }
+    div[class*="box"]{
+    background-color:aqua;
+    }
+
+    input:focus{
+    /*input에 초점이 맞춰진 상태*/
+    background-color:blue;
+    }
+
+    div{
+    width:650px;
+    height:300px;
+    background-color:antiquewhite;
+    overflow:hidden;
+    }
+    /*checked input에 check가 된 상태!*/
+
+    input[type="checkbox"]:checked+div{
+    background-color:aqua;
+    }
+    /*  +동위선택자 바로 뒤에 위치하는 특정요소를 선택*/
+
+    /*문자선택자*/
+    p::first-letter{
+    /*특정한 선택자에 첫번째 글자를 선택*/
+    font-size:20px;
+    font-weight:900;
+    color:aqua
+    }
+
+    p::first-line{
+    background-color:cornflowerblue;
+    }
+
+    h1::before{
+    content:'앞쪽>';
+    font-size:30px;
+    font-weight:900px;
+    color:aquamarine;
+    }
+
+    p::after{
+    content:'<뒤쪽';
+    font-size:30px;
+    font-weight:900px;
+    color:aquamarine;
+    }
+
+
+
+  </style>
+</head>
+<body>
+<!--속성선택자: 특정한 속성이나 특정한 속성값을 가지고 있는 html요소를 선택
+    [속성이름="속성값"]
+    [속성이름$="속성값"] 접미사로 끝나는 속성값
+    [속성이름*="속성값"] 특정문자가 들어가있는 부분-->
+<input type="text"/>
+<div class="box">
+  <img src="img1/cam.jpg" alt=""/>
+  <img src="img1/cam1.png" alt=""/>
+  <img src="img1/cam2.png" alt=""/>
+
+</div>
+
+
+<!--상태선택자:마우스의반응에 따른 상태를 선택-->
+
+<input type="text"/>
+<!--커서 깜박이는걸 focus라고 함-->
+
+<br/>
+<br/>
+
+<input type="checkbox"/>
+<!-가상요소선택자
+    선택될 요소의 앞 혹은 뒤쪽으로 가상의 요소를 넣어 표현
+    ::before 특정요소의 앞에 삽입,내용이나 가상의 요소를 부여
+    ::after 특정요소의 뒤에 삽입,내용이나 가상의 요소를 부여--->
+
+<div>
+    <h1>Lorem Ipusm</h1>
+    <p>
+        sadasdjkhfkdajf;sdajfkldsjfkd;slfjsld;kfjsad;fhlsafjlasjfl;ksa
+        fjdskl;fja;slkfjdskl;fjsald;kfjsaklfjskl;fjslkfj
+        fjdsalkfjsdklafjsalk;fjsldkfjskldfjalksfjiowejfiwaenf;
+        fjdsklfjweio;jfakm;fkaldsjfj;s
+        fjdklf;jas;fojewoaijf;i;nfds;kfnas;nfaoe;
+    </p>
+</div>
+
+</body>
+</html>
