@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>다양한 색상</title>
+    <style>
+    *{
+    padding:0;
+    margin:0;
+    }
+    div{
+    width:100%;
+    height:100px;
+    fort-size:20px;
+    text-align:center;
+    line-height:100px;
+    /*글자의 높이가 부모값이랑 동일하면 상하선상 중심배치 단 글자가 한줄일 때만*/
+    }
+    /*공통된 빨간색 부여*/
+    #word{background-color:red;}
+
+    #hex{background-color:#f00;}/*반복되는 두자리는 한자리로 표현가능*/
+
+    #rgb{background-color:rgb(255 0 0);
+    /*색상값은256개/0~255*/}
+
+    #rgba{background-color:rgba(255,0,0,0.5);}/*색상에 대한 투명도-0~1사이의 소수점*/
+
+    #hsl{
+    background-color:hsl(0,100%,50%);
+    opacity:0.5;
+    /*요소의투명도를 부여하는 속성(글자),0~1사이의 소수점 =값
+    상속 = 자식요소를 포함한 모든 부분의 투명도가 적용*/
+    }
+
+    #hsla{background-color:hsla(0,100%,50%,0.5);}
+
+    p{
+    width:300px;
+    height:300px;
+    background-color:#c8d3ff;
+    text-align:center;
+    line-height:300px;
+    margin:100px;
+    box-shadow:5px 5px 10px #000;
+    /*박스의그림자 속성:x축,y축,그림자크기, 그림자색상*/
+    font-size:30px;
+    font-weight:900;
+    color:#fff;
+    text-shadow:5px 3px 7px #333;
+    /*글자의 그림자 속성*/
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#04e548+0,041add+44,b9e800+100 */
+background: #04e548; /* Old browsers */
+background: -moz-linear-gradient(top,  #04e548 0%, #041add 44%, #b9e800 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #04e548 0%,#041add 44%,#b9e800 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #04e548 0%,#041add 44%,#b9e800 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04e548', endColorstr='#b9e800',GradientType=0 ); /* IE6-9 */
+
+    }
+
+
+    </style>
+</head>
+<body>
+<div id="word">단어:단어로 입력하는 방법</div>
+<div id="hex">컬러코드: #웹번호로 입력하는 방법</div>
+<div id="rgb">rgb: red,green,blue의 숫자값을 입력하는 방법</div><!--rgb:모니터나 스크린사용 목적일 때는 RGB는 빛의 삼원색을 혼합하여 나타내는 방식 혼합할 수록 흰색-->
+<div id="rgba">rgba:rgb표현방식에 alpha(투명도)값이 추가</div>
+<div id="hsl">hsl:hue,saturation,lightness의 양값을 입력하는 방식</div>
+<div id="hsla">hsla:hsl표현방식에 alpha(투명도)값이 추가</div>
+<p>
+    box
+</p>
+</body>
+</html>
