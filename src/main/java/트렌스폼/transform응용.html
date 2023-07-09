@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform응용</title>
+    <style>
+        *{padding:0; margin:0;}
+
+        /*div{
+        width:300px;
+        height:300px;
+        background-color:aquamarine;
+        text-align:center;
+        line-height:300px;
+        transform:다중작성시 띄어쓰기로 구분
+        transform:translate(100px,100px)rotate(30deg);
+
+        -ms-transform:translate(100px,100px)rotate(30deg); ie
+        -moz-transform:translate(100px,100px)rotate(30deg); 파이어폭스
+        -webkit-transform:translate(100px,100px)rotate(30deg); 사파리,크롬(구글)
+        -o-transform:translate(100px,100px)rotate(30deg); 오페라
+        }*/
+
+/*
+접두어(PREFIX): 크로스 브라우징:하나의 웹페이지를 제작할때 모든 브라우저에서 올바르게 호환되게 하는것
+접두어를 속성 앞에 사용하여 모든 브라우저에서 호환되게(크로스 브라우징)하기 위해 사용하는 언어
+-ms ie9익스플로어용(보통 생략)
+-moz 파이어 폭스
+-webkit 사파리,크롬(구글)
+-o 오페라
+*/
+    header{
+    width:100%;
+    height:100px;
+    background-color:coral;
+    overflow:hidden;
+    }
+
+    #ham{
+    width:64px;
+    height:57px;
+    padding:22px;
+    background-color:#ff9c78;
+    overflow:hidden;
+    cursor:pointer;/*손모양의 커서로 변경*/
+    }
+
+    .line{
+    background-color:beige;
+    width:56px;
+    height:5px;
+    margin:10px 0px;
+    transition-duration:0.5s;
+    }
+    #main{
+    width:100%;
+    overflow:hidden;
+    padding:200px 0px;
+    background-color:#50b5ff;
+    text-align:center;
+    color:#fff;
+    }
+
+    /*첫번째 줄*/
+    #ham:hover #top{
+    transform:translateY(15px)rotate(45deg);
+    transform-origin:center;
+    }
+
+    /*두번째 줄*/
+    #ham:hover #mid{
+    opacity:0;
+    }
+
+    #ham:hover #btm{
+    transform:translateY(-15px)rotate(-45deg);
+    transform-origin:center;
+    }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div id="ham">
+        <div class="line" id="top"></div>
+        <div class="line" id="mid"></div>
+        <div class="line" id="btm"></div>
+    </div>
+</header>
+<div id="main">
+    <h1>안녕하세요!</h1>
+    <p>저희 웹페이지에 방문해 주셔서 감사합니다!</p>
+</div>
+</body>
+</html>
